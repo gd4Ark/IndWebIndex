@@ -5,7 +5,9 @@ const ThemeContext = createContext()
 export const ThemeProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(false)
 
-  document.documentElement.classList.add('font-wenkai')
+  if (typeof document !== 'undefined' && document?.documentElement) {
+    document.documentElement.classList.add('font-wenkai')
+  }
 
   useEffect(() => {
     const hour = new Date().getHours()
