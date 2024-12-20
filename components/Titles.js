@@ -8,10 +8,10 @@ const Titles = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Individual Web Index.
+        4Ark Web Index.
       </a>
     </div>
   </div>
-);
+)
 
-export default Titles;
+export default Titles
