@@ -3,7 +3,6 @@ import Titles from '../components/Titles'
 import SearchBox from '../components/SearchBox'
 import Tags from '../components/Tags'
 import WebList from '../components/WebList'
-import FontMenu from '../components/FontMenu'
 import HeaderBar from '../components/HeaderBar'
 import {
   randomSort,
@@ -61,8 +60,7 @@ const MainPage = ({ initialPosts, lastFetched }) => {
   return (
     <div className="bg-stone-50 dark:bg-slate-800 backdrop-blur-[15px] m-0 min-h-screen overflow-auto tracking-widest text-center flex flex-col">
       <HeaderBar lastFetched={lastFetched} />
-      <FontMenu />
-      <div className="flex-grow text-center mx-auto relative">
+      <div className="flex-grow text-center mx-auto relative pb-[10px]">
         <Titles />
         <SearchBox searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <Tags
