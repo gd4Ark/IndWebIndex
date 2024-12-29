@@ -7,18 +7,8 @@ export const ThemeProvider = ({ children }) => {
 
   if (typeof document !== 'undefined' && document?.documentElement) {
     document.documentElement.classList.add('font-wenkai')
+    document.documentElement.classList.remove('dark')
   }
-
-  useEffect(() => {
-    const hour = new Date().getHours()
-    if (hour >= 21 || hour < 7) {
-      document.documentElement.classList.add('dark')
-      setIsDark(true)
-    } else {
-      document.documentElement.classList.remove('dark')
-      setIsDark(false)
-    }
-  }, [])
 
   const toggleTheme = () => {
     if (isDark) {
