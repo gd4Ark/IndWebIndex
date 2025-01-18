@@ -5,7 +5,6 @@ import Tags from '../components/Tags'
 import WebList from '../components/WebList'
 import HeaderBar from '../components/HeaderBar'
 import {
-  randomSort,
   extractTags,
   filterPostsBySearch,
   toggleTagButton,
@@ -37,7 +36,7 @@ const MainPage = ({ initialPosts, lastFetched }) => {
   }, [initialPosts])
 
   useEffect(() => {
-    const extractedTags = randomSort(extractTags(normalPosts))
+    const extractedTags = extractTags(normalPosts)
     setTags(extractedTags)
   }, [normalPosts])
 
